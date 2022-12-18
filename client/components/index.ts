@@ -26,3 +26,12 @@ guess = 'green';
 guess = 5;
 // a variable can be declared with no type, making it type = "any", which can
 // therefore be assigned different types of primitives without incurring an error
+
+let phoneNumber: string;
+// you can assign a type to a variable without a value so that the value can be assigned later, but with the same type.
+
+if (Math.random() > 0.5) {
+  phoneNumber = '+61770102062';
+} else {
+  phoneNumber = '7167762323';
+}
