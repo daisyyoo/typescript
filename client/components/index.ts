@@ -20,3 +20,9 @@ console.log(firstName.toUpperCase());
 // incorrectly, it'll tell you in an error message
 
 console.log(firstName.length);
+
+let guess;
+guess = 'green';
+guess = 5;
+// a variable can be declared with no type, making it type = "any", which can
+// therefore be assigned different types of primitives without incurring an error
