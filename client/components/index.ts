@@ -58,3 +58,14 @@
 // exclaim('Muriel', 6);
 // // made sure the parameters were in the same order
 // // so that name was a string and count was a number
+
+// function triple(value: number) {
+//   // parameters can be set with a primitive type
+//   return value * 3;
+// }
+
+// function greetTripled(greeting: string, value: number) {
+//   console.log(`${greeting}, ${triple(value)}!`);
+// }
+
+// greetTripled('Hiya', 5);
