@@ -79,3 +79,18 @@
 // proclaim();
 // proclaim('ready?');
 // proclaim('ready!');
+
+// parameters with a default value don't need a ? after their name, since
+// assigning a default value implies that they're optional parameters
+function proclaim(status = 'not ready...', repeat = 1) {
+  // Change the color to equal sign, and the assignment operator acts as the
+  // optional value, while giving it a default value
+  for (let i = 0; i < repeat; i += 1) {
+    // the || sign is removed since the default value is already given
+    console.log(`I'm ${status}`);
+  }
+}
+
+proclaim();
+proclaim('ready?');
+proclaim('ready!', 3);
