@@ -94,3 +94,13 @@ function proclaim(status = 'not ready...', repeat = 1) {
 proclaim();
 proclaim('ready?');
 proclaim('ready!', 3);
+
+
+function getRandomNumber() {
+  return Math.random();
+}
+const myVar = getRandomNumber();
+// TypeScript can also infer types of values returned by functions
+// Looks at the value of the function's return statement
+// since the function returns a number type, myVar is going to be a number type
+console.log(myVar);
