@@ -69,3 +69,13 @@
 // }
 
 // greetTripled('Hiya', 5);
+
+// function proclaim(status?: string) {
+//   // You can write a ? after the parameter to let javascript know that the
+//   // parameter is optional, thus allowing undefined to be okay
+//   console.log(`I'm ${status || 'not ready...'}`);
+// }
+
+// proclaim();
+// proclaim('ready?');
+// proclaim('ready!');
