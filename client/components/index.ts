@@ -130,3 +130,12 @@ console.log(myVar);
 //   return 'durian.jpg'
 // }
 // console.log(returnFruit());
+
+function makeFruitSalad(fruit1: string, fruit2: string): void {
+  // functions should have type annotation, but if they don't return anything,
+  // like console.log doesn't return anything, they should be written with type void.
+  let salad = fruit1 + fruit2 + fruit2 + fruit1 + fruit2 + fruit1 + fruit1;
+  console.log(salad);
+}
+
+makeFruitSalad('banana', 'pineapple');
