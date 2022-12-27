@@ -140,13 +140,15 @@ function makeFruitSalad(fruit1: string, fruit2: string): void {
 
 makeFruitSalad('banana', 'pineapple');
 
+
+//documentation comments are styled like below to describe what the function does
+
 /**
  * Returns the concatenation of 2 strings
  * @param fruit1 - First input string
  * @param fruit2 - Second input string
  * @returns nothing, aka console.log
  */
-
 function makeFruitSalad1(fruit1: string, fruit2: string): void {
   let salad = fruit1 + fruit2 + fruit2 + fruit1 + fruit2 + fruit1 + fruit1;
   console.log(salad);
@@ -158,10 +160,47 @@ function makeFruitSalad1(fruit1: string, fruit2: string): void {
  * @param repeat - number 1
  * @returns nothing, console.log of a string @param status number of times @param repeat
  */
-
-
 function proclaim2(status = 'not ready...', repeat = 1) {
   for (let i = 0; i < repeat; i += 1) {
     console.log(`I'm ${status}`);
   }
 }
+
+// Edited to make sure all type annotations were correct for the below code
+
+function useMagnifyingGlass(): any {
+  // this cannot be type void despite returning nothing in the beginning because
+  // the return is assigned to a variable later on
+  console.log('I will use my magnifying glass.')
+}
+
+function determineCulprit(): number {
+  // this function stays number type because of Math
+  return Math.floor(Math.random() * 2 + 1)
+}
+
+function doSleuthing(numberOfClues: number, clue1: string, clue2: string, suspect1: string, suspect2: string): string {
+  // the function will return type string according to the return statements
+  console.log('I am a famous detective and I will solve the crime.');
+  let unnecessaryVariable = 'Why is this here?'
+  unnecessaryVariable = useMagnifyingGlass();
+
+  console.log('Now I consider the first clue: ', clue1);
+  console.log('Now I consider the second clue: ', clue1);
+
+  let culpritNumber: number = determineCulprit();
+  // variable culpritNumber has to be number to compare the number below
+  console.log('Now, I will return to you the culprit. There but for the grace of God go we.');
+  if (culpritNumber == 1) { return (suspect1) }
+  if (culpritNumber == 2) { return (suspect2) }
+
+  return "I couldn't figure out who drank the priceless milk. :( :("
+}
+
+let answer:any = 3;
+// this variable is type any despite being assigned the number 3 because the next
+// line of code assigns the variable answer to the function doSleuthing which is type string
+
+answer = doSleuthing(2, 'The parrot heard everything!', 'All the doors and windows were shut from the INSIDE.', 'Burglar Bob', 'Saint Sam')
+
+console.log('The culprit was none other than ', answer, '!');
