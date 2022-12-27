@@ -139,3 +139,29 @@ function makeFruitSalad(fruit1: string, fruit2: string): void {
 }
 
 makeFruitSalad('banana', 'pineapple');
+
+/**
+ * Returns the concatenation of 2 strings
+ * @param fruit1 - First input string
+ * @param fruit2 - Second input string
+ * @returns nothing, aka console.log
+ */
+
+function makeFruitSalad1(fruit1: string, fruit2: string): void {
+  let salad = fruit1 + fruit2 + fruit2 + fruit1 + fruit2 + fruit1 + fruit1;
+  console.log(salad);
+}
+
+/**
+ * Returns a console.log number of times from second param
+ * @param status - string 'not ready...'
+ * @param repeat - number 1
+ * @returns nothing, console.log of a string @param status number of times @param repeat
+ */
+
+
+function proclaim2(status = 'not ready...', repeat = 1) {
+  for (let i = 0; i < repeat; i += 1) {
+    console.log(`I'm ${status}`);
+  }
+}
