@@ -27,7 +27,16 @@ function stringPush(val: string) {
 // const stuff: Array<string> = ['hello', 'more', 'stuff'];
 // Capital A for Array<type> with type in <>
 
+// Arrays can have types, and then have multidimensional Arrays,
+// like if an element of an array is another array, so on and so forth
+
+// Arrays:
 let bestNumbers: number[] = [7, 77, 4];
 let bestLunches: string[] = ['chicken soup', 'non-chicken soup'];
-let bestBreakfasts: string[] = ['scrambled eggs', 'oatmeal', 'tamago kake gohan', 'any kind of soup'];
+let bestBreakfasts: string[] = ['fasting', 'oatmeal', 'tamago kake gohan', 'any kind of soup'];
 let bestBooleans: boolean[] = [true, false];
+
+// Multidimensional Arrays:
+let bestMealPlan: string[][] = [bestLunches, bestBreakfasts, ['baked potato', 'mashed potato']];
+let bestBooleansTwice: boolean[][] = [bestBooleans, bestBooleans];
+let numbersMulti: number[][][] = [[[1], [2, 3]], [[7], bestNumbers]];
