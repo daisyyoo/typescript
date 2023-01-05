@@ -40,3 +40,15 @@ let bestBooleans: boolean[] = [true, false];
 let bestMealPlan: string[][] = [bestLunches, bestBreakfasts, ['baked potato', 'mashed potato']];
 let bestBooleansTwice: boolean[][] = [bestBooleans, bestBooleans];
 let numbersMulti: number[][][] = [[[1], [2, 3]], [[7], bestNumbers]];
+
+// A tuple cannot be reassigned with an array variable
+// A tuple is like an array but with the type of each element predefined.
+
+let favoriteCoordinates: [number, number, string, number, number, string] = [40, 43.2, 'N', 73, 59.8, 'W'];
+
+favoriteCoordinates = [17, 45, 'N', 142, 30, 'E'];
+
+// favoriteCoordinates[6] = -6.825;
+// Tuples also have indexes, like arrays.
+// This doesn't work because tuples have a predefined length from when the types are defined.
+// This tuple's last index is 5, so you can't add anything into it.
